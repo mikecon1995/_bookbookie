@@ -20,7 +20,10 @@ namespace bookbookie.Repository
         {
             return DataSource().Where(x => x.Title.Contains(title) || x.Author.Contains(authorName)).ToList();
         }
-
+        public List<BookModel> GetBookTitle(String title)
+        {
+            return DataSource().Where(x => x.Title.Contains(title)).ToList();
+        }
         private List<BookModel> DataSource()
         {
             return new List<BookModel>()
@@ -31,6 +34,7 @@ namespace bookbookie.Repository
                 new BookModel(){Id = 4, Title = "College Alegbra", Author = "Juile Miller, Donna Gerken", Description = "This is the description for College Alegbra", Price ="$75.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
                 new BookModel(){Id = 5, Title = "Abstract Alegbra", Author = "Joespeh J. Rotman", Description = "This is the description for Abstract Alegbra", Price ="$175.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
                 new BookModel(){Id = 6, Title = "Literature for childern", Author = "David L. Russel", Description = "This is the description for Literature for childern", Price ="$65.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
+                new BookModel(){Id = 7, Title = "Literature for childern", Author = "David L. Russel", Description = "This is the description for Literature for childern", Price ="$65.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
             };
         }
     }

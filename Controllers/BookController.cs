@@ -22,6 +22,12 @@ namespace bookbookie.Controllers
 
             return View(data);
         }
+        public ViewResult GetBookTitle(String title)
+        {
+            var data = _bookRepository.GetBookTitle(title);
+
+            return View(data);
+        }
         public ViewResult GetBook(int id)
         {
             var data = _bookRepository.GetBookById(id);
