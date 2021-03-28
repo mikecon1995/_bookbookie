@@ -26,7 +26,10 @@ namespace bookbookie
             {
                 app.UseDeveloperExceptionPage();
             }
-
+            DefaultFilesOptions options = new DefaultFilesOptions();
+            options.DefaultFileNames.Clear();
+            options.DefaultFileNames.Add("Index.cshtml");
+            app.UseDefaultFiles(options);
             app.UseStaticFiles();
             app.UseDefaultFiles();
 
