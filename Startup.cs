@@ -27,6 +27,9 @@ namespace bookbookie
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
+            app.UseDefaultFiles();
+
             app.UseRouting();
 
             app.UseEndpoints(endpoints =>

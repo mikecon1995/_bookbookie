@@ -17,9 +17,11 @@ namespace bookbookie.Controllers
             _bookRepository = new BookRespository();
         }
 
-       public List<BookModel> GetAllBooks()
+       public ViewResult GetAllBooks()
         {
-            return _bookRepository.GetallBooks();
+            var data = _bookRepository.GetallBooks();
+
+            return View();
         }
 
         public BookModel GetBook(int id)

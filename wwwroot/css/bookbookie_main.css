@@ -1,0 +1,174 @@
+﻿/* ===================
+	 mainshowcase styles
+	 =================== */
+.main_showcase {
+    margin-top: 40px;
+    padding: 10px;
+    display: grid;
+    justify-content: center;
+    grid-gap: 20px;
+    grid-template-columns: auto auto auto;
+}
+
+    .main_showcase .main_item {
+        background-color: rgba(255, 255, 255, 0.8);
+        border: none;
+        padding: 50px;
+        font-size: 30px;
+        text-align: center;
+    }
+
+        .main_showcase .main_item img {
+            width: auto;
+            margin: 30px;
+            height: 220px;
+            cursor: pointer;
+        }
+
+        .main_showcase .main_item:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: 0.3s ease-in-out;
+        }
+/* ==============
+	 divider styles
+	 ============== */
+.solid_line {
+    border-top: 3px solid #bbb;
+    margin: 20px;
+}
+/* =============================
+	 now-trending container styles
+	 ============================= */
+.now-trending__header {
+    font-family: 'Revalia';
+    font-size: 42px;
+    padding: 30px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.now-trending__container {
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+}
+
+    .now-trending__container .now-trending__card {
+        margin: 20px;
+        padding: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        text-align: center;
+        font-family: 'Revalia';
+        font-size: 23px;
+        text-transform: capitalize;
+    }
+
+        .now-trending__container .now-trending__card h3, h5 {
+            padding: 3px;
+        }
+
+        .now-trending__container .now-trending__card .stars .checked {
+            color: orange;
+        }
+
+        .now-trending__container .now-trending__card .stars .half {
+            color: orange;
+        }
+
+        .now-trending__container .now-trending__card .stars {
+            margin: 10px;
+            color: #D3D3D3;
+        }
+
+        .now-trending__container .now-trending__card:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: 0.3s ease-in-out;
+        }
+/* =============================
+	 new-releases container styles
+	 ============================= */
+.new-releases__header {
+    font-family: 'Revalia';
+    font-size: 42px;
+    padding: 30px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.new-releases__container {
+    flex-direction: row;
+    justify-content: center;
+    display: flex;
+}
+
+    .new-releases__container .new-releases__card {
+        margin: 20px;
+        padding: 5px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        text-align: center;
+        font-family: 'Revalia';
+        font-size: 23px;
+        text-transform: capitalize;
+    }
+
+        .new-releases__container .new-releases__card h3, h5 {
+            padding: 3px;
+        }
+
+        .new-releases__container .new-releases__card .stars .checked {
+            color: orange;
+        }
+
+        .new-releases__container .new-releases__card .stars .half {
+            color: orange;
+        }
+
+        .new-releases__container .new-releases__card .stars {
+            margin: 10px;
+            color: #D3D3D3;
+        }
+
+        .new-releases__container .new-releases__card:hover {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            transition: 0.3s ease-in-out;
+        }
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }

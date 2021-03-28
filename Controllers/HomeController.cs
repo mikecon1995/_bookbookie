@@ -8,9 +8,17 @@ namespace bookbookie.Controllers
 {
     public class HomeController : Controller
     {
-        public string Idex()
+        public ViewResult Index()
         {
-            return "BookBookie";
+            return View();
+        }
+        public ViewResult AboutUs()
+        {
+            return View();
+        }
+        public ActionResult Authentication()
+        {
+            return View();
         }
     }
 }

@@ -10,7 +10,7 @@ namespace bookbookie.Repository
     {
         public List<BookModel> GetallBooks()
         {
-
+            return DataSource();
         }
         public BookModel GetBookById(int id)
         {
