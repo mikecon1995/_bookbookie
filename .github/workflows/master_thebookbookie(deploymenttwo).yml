@@ -7,10 +7,9 @@ on:
   push:
     branches:
       - master
-  workflow_dispatch:
 
 jobs:
-  build:
+  build-and-deploy:
     runs-on: windows-latest
 
     steps:
@@ -19,7 +18,7 @@ jobs:
     - name: Set up .NET Core
       uses: actions/setup-dotnet@v1
       with:
-        dotnet-version: '3.1.301'
+        dotnet-version: '3.1.102'
 
     - name: Build with dotnet
       run: dotnet build --configuration Release
@@ -27,30 +26,11 @@ jobs:
     - name: dotnet publish
       run: dotnet publish -c Release -o ${{env.DOTNET_ROOT}}/myapp
 
-    - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v2
-      with:
-        name: .net-app
-        path: ${{env.DOTNET_ROOT}}/myapp
-
-  deploy:
-    runs-on: windows-latest
-    needs: build
-    environment:
-      name: 'deploymenttwo'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-    - name: Download artifact from build job
-      uses: actions/download-artifact@v2
-      with:
-        name: .net-app
-
     - name: Deploy to Azure Web App
-      id: deploy-to-webapp
+id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
         app-name: 'thebookbookie'
         slot-name: 'deploymenttwo'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_310bb13af6c34e6ab2205dac74685ac4 }}
-        package: .
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_4c0b007a5b504b05aa16a32f5d5353bf }}
+        package: ${{env.DOTNET_ROOT}}/myapp 
