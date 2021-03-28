@@ -1,7 +1,6 @@
 ﻿body {
     font-family: Arial;
     font-size: 17px;
-    padding: 8px;
 }
 
 * {
@@ -36,7 +35,12 @@
 .col-75 {
     padding: 0 16px;
 }
-
+.checkout-container{
+    margin: auto;
+}
+.checkout-now-trending__card{
+    margin: auto;
+}
 .container {
     background-color: #f2dada;
     padding: 5px 20px 15px 20px;

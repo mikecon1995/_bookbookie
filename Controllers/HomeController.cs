@@ -3,6 +3,8 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using System.Dynamic;
+using bookbookie.Models;
 
 namespace bookbookie.Controllers
 {
@@ -10,6 +12,8 @@ namespace bookbookie.Controllers
     {
         public ViewResult Index()
         {
+            ViewData["book"] = new BookModel() { Id = 1 };
+
             return View();
         }
         public ViewResult AboutUs()
