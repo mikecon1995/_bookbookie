@@ -1,0 +1,27 @@
+﻿@model IEnumerable<bookbookie.Models.BookModel>
+@{
+    Layout = "_Layout";
+}
+<h1 class="store_header">Store</h1>
+<!--solid line-->
+<hr class="solid_line">
+<div class=" store_container">
+
+    @foreach (var book in Model)
+    {
+    <div class="card">
+        <h3 class="title">@book.Title</h3>
+        <p class="author">@book.Author</p>
+        <p class="price">@book.Price</p>
+        <a href="/book/getbook/@book.Id"><button class="btn-store">More Details</button></a>
+    </div>
+    }
+
+</div>
+<!--solid line-->
+<hr class="solid_line">
+
+
+
+
+

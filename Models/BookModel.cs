@@ -7,10 +7,18 @@ namespace bookbookie.Models
 {
     public class BookModel
     {
-        public int Id { get; set; }
+        public int Id { get; set;}
 
-        public string Title { get; set; }
+        public String Title { get; set; }
 
-        public string Author { get; set; }
+        public String Author { get; set; }
+
+        public String Price { get; set; }
+        public String ISBN { get; set; }
+
+        public String ISBN13 { get; set; }
+
+        public String Description { get; set; }
+
     }
 }

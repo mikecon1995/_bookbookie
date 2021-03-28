@@ -1,0 +1,55 @@
+﻿.store_header {
+    font-family: 'Revalia';
+    font-size: 32px;
+    text-align: center;
+    color: #000;
+    margin: 20px;
+}
+.store_container {
+    margin: auto;
+    margin-top: 150px;
+    margin-bottom: 150px;
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    width: 250px;
+    max-width: 250px;
+    height: 350px;
+    margin: auto;
+    margin-left: 10px;
+    margin-right: 10px;
+    text-align: center;
+    font-family: arial;
+    padding: 20px;
+}
+.price {
+    color: grey;
+    margin-top: 75px;
+    font-size: 22px;
+}
+.title{
+    padding: 10px;
+}
+.description {
+    padding: 10px;
+} 
+.btn-store {
+    border: none;
+    margin: 10px;
+    outline: 0;
+    padding: 12px;
+    color: white;
+    background-color: #BC5D5D;
+    text-align: center;
+    cursor: pointer;
+    width: 80%;
+    font-size: 18px;
+}
+.btn-store:hover {
+    opacity: 0.7;
+}

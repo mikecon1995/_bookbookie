@@ -6,7 +6,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Views\Book\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 

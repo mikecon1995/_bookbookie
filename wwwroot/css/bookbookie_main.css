@@ -1,174 +1,323 @@
-﻿/* ===================
-	 mainshowcase styles
-	 =================== */
-.main_showcase {
-    margin-top: 40px;
-    padding: 10px;
-    display: grid;
-    justify-content: center;
-    grid-gap: 20px;
-    grid-template-columns: auto auto auto;
+﻿/* ====================
+	 Global styles
+	 ==================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+/* ====================
+	 main nav icon styles
+	 ==================== */
+.nav_container {
+    background-color: #BC5D5D;
+    overflow: hidden;
+    margin-bottom: 100px;
 }
 
-    .main_showcase .main_item {
-        background-color: rgba(255, 255, 255, 0.8);
-        border: none;
-        padding: 50px;
-        font-size: 30px;
+    .nav_container .left_side_nav_btn {
         text-align: center;
+        float: left;
     }
 
-        .main_showcase .main_item img {
-            width: auto;
-            margin: 30px;
-            height: 220px;
+    .nav_container .header {
+        font-family: 'Revalia';
+        font-size: 32px;
+        text-align: center;
+        color: white;
+    }
+
+    .nav_container .right_side_nav_btn {
+        text-align: center;
+        float: right;
+    }
+
+    .nav_container a {
+        position: relative;
+        color: #fff;
+        display: inline-block;
+        width: 75px;
+        padding: 20px;
+        font-size: 32px;
+        cursor: pointer;
+        margin-top:
+    }
+
+        .nav_container a::before {
+            content: "";
+            position: absolute;
+            width: 100%;
+            height: 2.5px;
+            bottom: 0;
+            left: 0;
+            background-color: #F2DADA;
+            visibility: hidden;
+            transform: scaleX(0);
+            transition: all 0.3s ease-in-out;
+        }
+
+        .nav_container a:hover::before {
+            visibility: visible;
+            transform: scaleX(1);
+        }
+/* ======================
+	 sticks nav bar at top
+	 ====================== */
+.sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+}
+.sticky + .search_menu {
+    margin-top: 150px;
+}
+/* ===============
+	 side nav styles
+	 =============== */
+.sidebar {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #BC5D5D;
+    overflow-x: hidden;
+    padding-top: 60px;
+    transition: 0.5s;
+}
+    /* The sidebar links */
+    .sidebar a {
+        position: relative;
+        padding: 8px 8px 8px 32px;
+        text-decoration: none;
+        font-size: 25px;
+        color: white;
+        display: block;
+        transition: 0.3s;
+    }
+
+    .sidebar .sidehover::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 2.5px;
+        bottom: 0;
+        left: 0;
+        background-color: #F2DADA;
+        visibility: hidden;
+        transform: scaleX(0);
+        transition: all 0.3s ease-in-out;
+    }
+
+    .sidebar .sidehover:hover::before {
+        visibility: visible;
+        transform: scaleX(1);
+    }
+
+    .sidebar .closebtn {
+        position: absolute;
+        color: #fff;
+        padding: 10px;
+        top: 15px;
+        right: 25px;
+        font-size: 29px;
+        margin-left: 50px;
+        cursor: pointer;
+    }
+
+#main {
+    transition: margin-left .5s; /* If you want a transition effect */
+    padding: 20px;
+}
+
+/* ===================
+	 search menu styles
+	 =================== */
+.search_menu {
+    margin: auto;
+    padding: 10px;
+    width: 50%;
+}
+
+    .search_menu button {
+        float: left;
+        width: 10%;
+        padding: 11px;
+        background: #BC5D5D;
+        color: white;
+        font-size: 32px;
+        border: none;
+        cursor: pointer;
+        border-radius: 8px 1px 1px 8px;
+    }
+
+    .search_menu input[type=text] {
+        text-decoration: none;
+        padding: 10px;
+        font-size: 28px;
+        border: 1px solid #ccc;
+        float: left;
+        width: 1000px;
+        max-width: 90%;
+        background: #f1f1f1;
+        border-radius: 1px 8px 8px 1px;
+    }
+
+        .search_menu input[type=text]:focus {
+            outline: none;
+        }
+
+        .search_menu input[type=text]:hover {
+            transition: 0.3s;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        }
+
+    .search_menu button:hover {
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+        transition: .3s ease-in-out;
+        background: #F2DADA;
+    }
+
+    .search_menu::after {
+        content: "";
+        clear: both;
+        display: table;
+    }
+/* =============
+	 footer styles
+	 ============= */
+.contact-us__container h3 {
+    font-family: 'Revalia';
+    font-size: 42px;
+    text-transform: capitalize;
+    text-align: center;
+}
+
+.footer__container {
+    /**background-color: #BC5D5D;**/
+    margin: 0;
+    display: flex;
+    flex-direction: row;
+}
+
+    .footer__container .contact-us__container {
+        padding: 30px;
+        width: 25%;
+        height: 90%;
+        height: 500px;
+        margin-left: 100px;
+        margin-bottom: 15px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    }
+
+        .footer__container .contact-us__container .contact-us__input {
+            width: 100%;
+            padding: 14px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 8px;
+            margin-bottom: 5px;
+            resize: none;
+            outline: none;
+        }
+
+        .footer__container .contact-us__container .contact-us_button {
+            background-color: #BC5D5D;
+            color: white;
+            width: 100%;
+            padding: 10px 10px;
+            margin: auto;
+            border: none;
+            border-radius: 4px;
             cursor: pointer;
         }
 
-        .main_showcase .main_item:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            transition: 0.3s ease-in-out;
-        }
-/* ==============
-	 divider styles
-	 ============== */
-.solid_line {
-    border-top: 3px solid #bbb;
-    margin: 20px;
-}
-/* =============================
-	 now-trending container styles
-	 ============================= */
-.now-trending__header {
-    font-family: 'Revalia';
-    font-size: 42px;
-    padding: 30px;
-    text-transform: capitalize;
-    text-align: center;
-}
+            .footer__container .contact-us__container .contact-us_button:hover {
+                background-color: #F2DADA;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                transition: .3s ease-in-out;
+            }
 
-.now-trending__container {
-    flex-direction: row;
-    justify-content: center;
-    display: flex;
-}
-
-    .now-trending__container .now-trending__card {
-        margin: 20px;
-        padding: 5px;
-        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        text-align: center;
-        font-family: 'Revalia';
-        font-size: 23px;
-        text-transform: capitalize;
+    .footer__container .social-media__container {
+        display: flex;
+        flex-direction: column;
+        padding: 30px;
+        width: 25%;
+        height: 90%;
+        height: 500px;
+        margin-left: 100px;
+        margin-bottom: 15px;
+        /**box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);**/
     }
 
-        .now-trending__container .now-trending__card h3, h5 {
-            padding: 3px;
-        }
-
-        .now-trending__container .now-trending__card .stars .checked {
-            color: orange;
-        }
-
-        .now-trending__container .now-trending__card .stars .half {
-            color: orange;
-        }
-
-        .now-trending__container .now-trending__card .stars {
+        .footer__container .social-media__container .social-media__icon {
+            text-align: center;
             margin: 10px;
-            color: #D3D3D3;
         }
 
-        .now-trending__container .now-trending__card:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            transition: 0.3s ease-in-out;
-        }
-/* =============================
-	 new-releases container styles
-	 ============================= */
-.new-releases__header {
-    font-family: 'Revalia';
-    font-size: 42px;
-    padding: 30px;
-    text-transform: capitalize;
-    text-align: center;
-}
+            .footer__container .social-media__container .social-media__icon .fa {
+                color: #fff;
+                background: #BC5D5D;
+                padding: 20px;
+                font-size: 30px;
+                width: 75px;
+                height: auto;
+                text-align: center;
+                text-decoration: none;
+                border-radius: 50%;
+            }
 
-.new-releases__container {
-    flex-direction: row;
-    justify-content: center;
-    display: flex;
-}
+                .footer__container .social-media__container .social-media__icon .fa:hover {
+                    background-color: #F2DADA;
+                    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                    transition: .3s ease-in-out;
+                }
 
-    .new-releases__container .new-releases__card {
-        margin: 20px;
-        padding: 5px;
+    .footer__container .Store-monietary__container {
         box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-        cursor: pointer;
-        text-align: center;
-        font-family: 'Revalia';
-        font-size: 23px;
-        text-transform: capitalize;
+        padding: 30px;
+        width: 25%;
+        height: 90%;
+        height: 500px;
+        margin-left: 100px;
+        margin-bottom: 15px;
     }
 
-        .new-releases__container .new-releases__card h3, h5 {
-            padding: 3px;
-        }
-
-        .new-releases__container .new-releases__card .stars .checked {
-            color: orange;
-        }
-
-        .new-releases__container .new-releases__card .stars .half {
-            color: orange;
-        }
-
-        .new-releases__container .new-releases__card .stars {
+        .footer__container .Store-monietary__container .Store-monietary__container__header {
+            font-family: 'Revalia';
+            font-size: 42px;
+            text-transform: capitalize;
+            text-align: center;
             margin: 10px;
-            color: #D3D3D3;
         }
 
-        .new-releases__container .new-releases__card:hover {
-            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-            transition: 0.3s ease-in-out;
+        .footer__container .Store-monietary__container .fas {
+            color: #BC5D5D;
+            margin-right: 8px;
         }
-/* The Modal (background) */
-.modal {
-    display: none; /* Hidden by default */
-    position: fixed; /* Stay in place */
-    z-index: 1; /* Sit on top */
-    padding-top: 100px; /* Location of the box */
-    left: 0;
-    top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    overflow: auto; /* Enable scroll if needed */
-    background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-}
 
-/* Modal Content */
-.modal-content {
-    background-color: #fefefe;
-    margin: auto;
-    padding: 20px;
-    border: 1px solid #888;
-    width: 80%;
-}
+        .footer__container .Store-monietary__container .fab {
+            color: #BC5D5D;
+            margin-right: 8px;
+        }
 
-/* The Close Button */
-.close {
-    color: #aaaaaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-}
+        .footer__container .Store-monietary__container a {
+            color: black;
+            text-decoration: none;
+            padding: 5px;
+        }
 
-    .close:hover,
-    .close:focus {
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
+        .footer__container .Store-monietary__container .Store-monietary__container__top {
+            display: flex;
+            flex-direction: column;
+            font-size: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer__container .Store-monietary__container .Store-monietary__container__bottom {
+            display: flex;
+            flex-direction: column;
+            font-size: 30px;
+        }

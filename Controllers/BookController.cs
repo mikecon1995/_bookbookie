@@ -10,26 +10,25 @@ namespace bookbookie.Controllers
 {
     public class BookController : Controller
     {
-        private readonly BookRespository _bookRepository = null;
+        private readonly BookRepository _bookRepository = null;
 
         public BookController()
         {
-            _bookRepository = new BookRespository();
+            _bookRepository = new BookRepository();
         }
-
-       public ViewResult GetAllBooks()
+        public ViewResult GetAllBooks()
         {
-            var data = _bookRepository.GetallBooks();
+            var data = _bookRepository.GetAllBooks();
 
-            return View();
+            return View(data);
         }
-
-        public BookModel GetBook(int id)
+        public ViewResult GetBook(int id)
         {
-            return _bookRepository.GetBookById(id);
-        }
+            var data = _bookRepository.GetBookById(id);
 
-        public List<BookModel> SearchBooks(String bookName, String authorName)
+            return View(data);
+        }
+        public List<BookModel> searchBooks(String bookName, String authorName)
         {
             return _bookRepository.SearchBook(bookName, authorName);
         }

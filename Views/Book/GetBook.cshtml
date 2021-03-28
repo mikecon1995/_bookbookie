@@ -1,0 +1,36 @@
+﻿@using bookbookie.Models
+@model BookModel;
+@{
+    Layout = "_Layout";
+}
+<html>
+<head>
+    <title>Book Bookie Authentication</title>
+
+</head>
+<body>
+    <h1 class="store_header">@Model.Title</h1>
+    <div class="store_container">
+        <div class="row">
+            <div class="col-md-6">
+                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
+                    <div class="carousel-inner">
+                        <div class="carousel-item active">
+                            <img src="~/images/now_trending1.jpg" />
+                        </div>
+                    </div>
+                </div>
+                <p class="decsription">Book Description: @Model.Description</p>
+                <p class="author">Author Name: @Model.Author</p>
+                <p class="price">Price: @Model.Price</p>
+                <p class="ISBN">ISBN: @Model.ISBN</p>
+                <p class="ISBN13">ISBN13: @Model.ISBN13</p>
+                <button class="btn-store">Add To Cart</button>
+            </div>
+        </div>
+
+
+        <!--link to javascript file-->
+        <script src="/js/bookbookie_authentication.js"></script>
+</body>
+</html>

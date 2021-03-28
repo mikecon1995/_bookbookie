@@ -2,74 +2,85 @@
 
 <html>
 <head>
-    <meta name="viewport" content="width=device-width" />
-    <link rel="stylesheet" href="/css/bookbookie_main.css">
-    <link rel="stylesheet" href="/css/bookbookie_index.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <script src="https://kit.fontawesome.com/0045dad13e.js" crossorigin="anonymous"></script>
-    <!--link to javascript file-->
     <script src="/js/bookbookie_main.js"></script>
-    <title>Book Bookie</title>
+    <link rel="stylesheet" href="~/css/bookbookie_main.css" />
+    <link rel="stylesheet" href="~/css/bookbookie_home.css" />
+    <link rel="stylesheet" href="~/css/bookbookie_store.css" />
+    <!--<link rel="stylesheet" href="~/lib/twitter-bootstrap/css/bootstrap.css" />-->
+    <title>@ViewBag.Title</title>
 </head>
 <body>
     <!-- side Nav Container -->
     <div id="mySidebar" class="sidebar">
         <i class="fas fa-times closebtn" onclick="closeNav()"></i>
-        <a  class="sidehover">Books</a>
-        <a href="#" class="sidehover">eBooks</a>
-        <a href="#" class="sidehover">Music</a>
-        <a href="#" class="sidehover">Audiobooks</a>
+        <a href="/home/index" class="sidehover">Home</a>
+        <a href="/book/getallbooks" class="sidehover">Store</a>
+        <a href="" class="sidehover">Account</a>
+        <a href="" class="sidehover">About Us</a>
+        <a href="" class="sidehover">Logout</a>
     </div>
 
     <!-- Main Nav Container -->
-    <div id="main" class="nav_container">
+    <div id="main" class="nav_container sticky">
         <!-- Menu Buttons --->
         <div class="left_side_nav_btn">
             <a onclick="openNav()"><i class="fas fa-bars"></i></a>
             <a href="#"><i class="fas fa-search-location"></i></a>
         </div>
+        <div class="right_side_nav_btn">
+            <a href="/home/authentication"><i class="fas fa-user-circle"></i></a>
+            <a href="/home/checkout"><i class="fas fa-shopping-cart"></i></a>
+        </div>
         <!-- Header Container -->
         <div class="header">
-            <h1> the Book Bookie </h1>
+            <h1>Book Bookie </h1>
         </div>
-        <div class="right_side_nav_btn">
-            <a href="#"><i class="fas fa-user-circle"></i></a>
-            <a href="#"><i class="fas fa-shopping-cart"></i></a>
-        </div>
+    </div>
+    <!-- Search Menu --->
+    <div class="search_menu">
+        <form>
+            <button type="submit"<i class="fas fa-search"></i></button>
+            <input type="text" name="search" placeholder="Search...">
+        </form>
     </div>
     <div>
         @RenderBody()
     </div>
+    <!--footer container-->
     <footer class="footer__container">
         <div class="contact-us__container">
             <h3>contact us</h3>
-                    <form action="/action_page.php">
-                        <input type="text" id="fname" name="firstname" placeholder="NAME" class="contact-us__input">
-                        <input type="email" id="email" name="email" placeholder="EMAIL ADDRESS" class="contact-us__input">
-                        <textarea id="subject" name="subject" placeholder="YOUR MESSAGE..." class="contact-us__input" style="height:200px"></textarea>
-                        <input type="submit" value="Submit" class="contact-us_button">
-                    </form>
+            <form action="/action_page.php">
+                <input type="text" id="fname" name="firstname" placeholder="NAME" class="contact-us__input">
+                <input type="email" id="email" name="email" placeholder="EMAIL ADDRESS" class="contact-us__input">
+                <textarea id="subject" name="subject" placeholder="YOUR MESSAGE..." class="contact-us__input" style="height:200px"></textarea>
+                <input type="submit" value="Submit" class="contact-us_button">
+            </form>
         </div>
         <div class="social-media__container">
             <a href="https://www.facebook.com/book.bookies.5/" class="social-media__icon"><i class="fa fa-facebook"></i></a>
             <a href="https://twitter.com/BookBookie1" class="social-media__icon"><i class="fa fa-twitter"></i></a>
-            <a href="https://thebookbookie-thebookbookie-deploymentthree.azurewebsites.net" class="social-media__icon"><i class="fa fa-google"></i></a>
+            <a href="#" class="social-media__icon"><i class="fa fa-google"></i></a>
             <a href="https://www.linkedin.com/in/book-bookie-51711620a/" class="social-media__icon"><i class="fa fa-linkedin"></i></a>
             <a href="https://www.youtube.com/channel/UCtPAVpE9IeyhOv_LwrW1W6w" class="social-media__icon"><i class="fa fa-youtube"></i></a>
         </div>
         <div class="Store-monietary__container">
             <h3 class="Store-monietary__container__header">store</h3>
-                    <div class="Store-monietary__container__top">
-                        <a href="#"><i class="fas fa-map-marker-alt"></i> book bookie</a>
-                        <a href="#"><i class="fas fa-phone-alt"></i> 401.000.0000</a>
-                        <a href="bookbookie2021@gmail.com"><i class="fas fa-envelope"></i> bookbookie@mail.com</a>
-                    </div>
-                    <h3 class="Store-monietary__container__header">we accept</h3>
-                            <div class="Store-monietary__container__bottom">
-                                <a href="#"><i class="fab fa-cc-visa"></i> visa</a>
-                                <a href="#"><i class="fab fa-cc-mastercard"></i> master card</a>
-                                <a href="#"><i class="fab fa-cc-amex"></i> american express</a>
-                            </div>
+            <div class="Store-monietary__container__top">
+                <a href="#"><i class="fas fa-map-marker-alt"></i> book bookie</a>
+                <a href="#"><i class="fas fa-phone-alt"></i> 401.000.0000</a>
+                <a href="#"><i class="fas fa-envelope"></i> bookbookie@mail.com</a>
+            </div>
+            <h3 class="Store-monietary__container__header">we accept</h3>
+            <div class="Store-monietary__container__bottom">
+                <a href="#"><i class="fab fa-cc-visa"></i> visa</a>
+                <a href="#"><i class="fab fa-cc-mastercard"></i> master card</a>
+                <a href="#"><i class="fab fa-cc-amex"></i> american express</a>
+            </div>
         </div>
     </footer>
+
 </body>
 </html>

@@ -16,15 +16,11 @@ namespace bookbookie.Controllers
         {
             return View();
         }
-        public ActionResult Authentication()
+        public ViewResult Checkout()
         {
             return View();
         }
-        public ActionResult Checkout()
-        {
-            return View();
-        }
-        public ActionResult Cart()
+        public ViewResult Authentication()
         {
             return View();
         }
