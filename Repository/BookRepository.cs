@@ -46,6 +46,12 @@ namespace bookbookie.Repository
                 new BookModel(){Id = 16, Title = "College Alegbra", Author = "Juile Miller, Donna Gerken", Description = "This is the description for College Alegbra", Price ="$75.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
                 new BookModel(){Id = 17, Title = "Abstract Alegbra", Author = "Joespeh J. Rotman", Description = "This is the description for Abstract Alegbra", Price ="$175.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
                 new BookModel(){Id = 18, Title = "Literature for childern", Author = "David L. Russel", Description = "This is the description for Literature for childern", Price ="$65.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
+                new BookModel(){Id = 19, Title = "Human Anatomy", Author = "Marieb Brady Mallatt", Description = "This is the description for Human Anatomy", Price ="$80.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
+                new BookModel(){Id = 20, Title = "Python", Author = "Paul Deitel, Harvey Deitel", Description = "This is the description for Python", Price ="$180.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
+                new BookModel(){Id = 21, Title = "Biology", Author = "Raven, Johnson, Mason, Losos, Duncan",Description = "This is the description for Biology", Price ="$280.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
+                new BookModel(){Id = 22, Title = "College Alegbra", Author = "Juile Miller, Donna Gerken", Description = "This is the description for College Alegbra", Price ="$75.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
+                new BookModel(){Id = 23, Title = "Abstract Alegbra", Author = "Joespeh J. Rotman", Description = "This is the description for Abstract Alegbra", Price ="$175.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
+                new BookModel(){Id = 24, Title = "Literature for childern", Author = "David L. Russel", Description = "This is the description for Literature for childern", Price ="$65.00", ISBN = "0135168058", ISBN13 = "9780135168059"},
             };
         }
     }
