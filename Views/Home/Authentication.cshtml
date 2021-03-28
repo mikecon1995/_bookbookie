@@ -1,1 +1,39 @@
-﻿
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <title> The Book Bookies </title>
+    <link rel="stylesheet" type="text/css" href="/css/bookbookie_authentication.css">
+</head>
+
+<body>
+    <div class="Form-box">
+        <div class="button-box">
+            <div id="btn"> </div>
+            <button type="button" class="toggle-btn" onclick="SignIn()"> Sign In </button>
+            <button type="button" class="toggle-btn" onclick="Create()"> Register </button>
+        </div>
+
+        <form action="login.inc.php" method="post" id="SignIn" class="input-group">
+            <input type="text" name="email" class="input-field" placeholder="Email" required>
+            <input type="password" class="input-field" placeholder="Password" required>
+            <input type="checkbox" class="checkbox"> <span> Remember Password </span>
+            <button type="submit" class="submit-btn"> Sign in </button>
+        </form>
+
+        <form action="signup.inc.php" method="post" id="Create" class="input-group">
+            <input type="text" class="input-field" placeholder="First Name" required>
+            <input type="text" class="input-field" placeholder="Last Name" required>
+            <input type="text" class="input-field" placeholder="Email" required>
+            <input type="password" class="input-field" placeholder="Password" required>
+            <input type="password" class="input-field" placeholder="Confirm Password" required>
+            <input type="checkbox" class="checkbox"> <span> I agree to the terms and conditions</span>
+            <button type="submit" class="submit-btn"> Create Account </button>
+        </form>
+    </div>
+
+
+    <!--link to javascript file-->
+    <script src="/js/bookbookie_authentication.js"></script>
+</body>
+</html>

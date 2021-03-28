@@ -20,5 +20,13 @@ namespace bookbookie.Controllers
         {
             return View();
         }
+        public ActionResult Checkout()
+        {
+            return View();
+        }
+        public ActionResult Cart()
+        {
+            return View();
+        }
     }
 }
