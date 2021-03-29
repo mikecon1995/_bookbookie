@@ -1,6 +1,4 @@
-﻿@model bookbookie.Models.MailModel
-
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 
 <html>
 <head>
@@ -55,25 +53,14 @@
     <!--footer container-->
     <footer class="footer__container">
         <div class="contact-us__container">
-            @using (Html.BeginForm("Index", "EmailSetup", FormMethod.Post, new { enctype = "multipart/form-data" }))
-            {
-                <h3>contact us</h3>
-                <table>
-                    <tr style="width: 80px">
-                        <td>@Html.TextBoxFor(model => model.To)</td>
-                    </tr>
-                    <tr>
-                        <td>@Html.TextBoxFor(model => model.Subject)</td>
-                    </tr>
-                    <tr>
-                        <td>@Html.TextBoxFor(model => model.Body), new{rows="15", cols="25"}</td>
-                    </tr>
-                    <tr>
-                        <td><input type="submit" value="send" /></td>
-                    </tr>
-                </table>
-            }
-
+            <h3>
+  contact us<h3>
+                    <form action="/action_page.php">
+                        <input type="text" id="fname" name="firstname" placeholder="NAME" class="contact-us__input">
+                        <input type="email" id="email" name="email" placeholder="EMAIL ADDRESS" class="contact-us__input">
+                        <textarea id="subject" name="subject" placeholder="YOUR MESSAGE..." class="contact-us__input" style="height:200px"></textarea>
+                        <input type="submit" value="Submit" class="contact-us_button">
+                    </form>
         </div>
         <div class="social-media__container">
             <a href="https://www.facebook.com/book.bookies.5/" class="social-media__icon"><i class="fa fa-facebook"></i></a>
