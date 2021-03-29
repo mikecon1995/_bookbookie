@@ -196,7 +196,7 @@
 
 .footer__container {
     /**background-color: #BC5D5D;**/
-    margin: 0;
+    margin: 30px;
     display: flex;
     flex-direction: row;
 }
