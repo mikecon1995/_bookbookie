@@ -6,6 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Folder Include="App_Start\" />
+    <Folder Include="Views\SendMailer\" />
     <Folder Include="wwwroot\images\" />
   </ItemGroup>
 
