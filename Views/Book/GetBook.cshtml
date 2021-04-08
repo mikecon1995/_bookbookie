@@ -1,37 +1,43 @@
-﻿@using bookbookie.Models
-@model BookModel
+﻿@using bookbookie.Models;
+@model BookModel; 
 @{
-    Layout = "_Layout";
-    ViewData["title"] = "Book Bookie Item " + Model.Title;
+    ViewData["Title"] = "Book Bookie | Item Details";
+    Layout = "_main";
+
 }
+
 <html>
-<head>
-    <title>Book Bookie Authentication</title>
+<head>S
+    <title></title>
 
 </head>
 <body>
-    <h1 class="store_header">@Model.Title</h1>
-    <div class="store_container">
-        <div class="row">
-            <div class="col-md-6">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner">
-                        <div class="carousel-item active">
-                            <img src="~/images/now_trending1.jpg" />
-                        </div>
+<div class="container">
+    <div class="card mb-3" style="max-width: 100%">
+        <div class="row g-0">
+            <div class="col-md-4">
+                <img src="~/images/now_trending1.jpg" />
+            </div>
+            <div class="col-md-8">
+                <div class="card text-center">
+                    <div class="card-header">
+                        <ul class="nav nav-tabs card-header-tabs">
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="true" href="#">Details</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="#">Price</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="card-body">
+                        <h5 class="card-title">Card title</h5>
+                        <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                        <p class="card-text"><small class="text-muted">Last updated 3 mins ago</small></p>
                     </div>
                 </div>
-                <p class="decsription">Book Description: @Model.Description</p>
-                <p class="author">Author Name: @Model.Author</p>
-                <p class="price">Price: @Model.Price</p>
-                <p class="ISBN">ISBN: @Model.ISBN</p>
-                <p class="ISBN13">ISBN13: @Model.ISBN13</p>
-                <button class="btn-store">Add To Cart</button>
             </div>
-        </div>
-
-
-        <!--link to javascript file-->
-        <script src="/js/bookbookie_authentication.js"></script>
+    </div>
+</div>
 </body>
 </html>

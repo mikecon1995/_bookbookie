@@ -12,9 +12,9 @@ namespace bookbookie.Controllers
     {
         private readonly BookRepository _bookRepository = null;
 
-        public BookController()
+        public BookController(BookRepository bookRepository)
         {
-            _bookRepository = new BookRepository();
+            _bookRepository = bookRepository;
         }
         public ViewResult GetAllBooks()
         {
@@ -37,6 +37,16 @@ namespace bookbookie.Controllers
         public List<BookModel> searchBooks(String bookName, String authorName)
         {
             return _bookRepository.SearchBook(bookName, authorName);
+        }
+        public ViewResult AddNewBook()
+        {
+            return View();
+        }
+        [HttpPost]
+        public ActionResult AddNewBook(BookModel bookModel)
+        {
+            _bookRepository.AddNewBook(bookModel);
+            return View();
         }
     }
 }

@@ -2,12 +2,41 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using bookbookie.Data;
 using bookbookie.Models;
 
 namespace bookbookie.Repository
 {
     public class BookRepository
     {
+        private readonly BookStoreContext _context = null;
+
+        public BookRepository(BookStoreContext context)
+        {
+            _context = context;
+        }
+        public int AddNewBook(BookModel model)
+        {
+            var newBook = new Books()
+            {
+                Title = model.Title,
+                Author = model.Author,
+                Price = model.Price,
+                ISBN = model.ISBN,
+                ISBN13 = model.ISBN13,
+                Description = model.Description,
+                Category = model.Category,
+                CreatedOn = DateTime.UtcNow,
+                UpdatedOn = DateTime.UtcNow
+            };
+
+            _context.Books.Add(newBook);
+            _context.SaveChanges();
+            return newBook.Id;
+        }
+
+
+
         public List<BookModel> GetAllBooks()
         {
             return DataSource();
