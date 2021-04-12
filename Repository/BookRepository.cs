@@ -34,9 +34,6 @@ namespace bookbookie.Repository
             _context.SaveChanges();
             return newBook.Id;
         }
-
-
-
         public List<BookModel> GetAllBooks()
         {
             return DataSource();

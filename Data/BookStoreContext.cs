@@ -17,6 +17,9 @@ namespace bookbookie.Data
 
         public DbSet<Books> Books { get; set; }
 
-        public DbSet<bookbookie.Models.BookModel> BookModel { get; set; }
+        protected override void OnConfiguring (DbContextOptionsBuilder optionBuilder)
+        {
+            optionBuilder.UseSqlServer("Server=bookbookie.database.windows.net;Database=bookbookie; User Id=myUsername;Password=myPassword;");
+        }
     }
 }
