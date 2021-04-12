@@ -43,9 +43,13 @@ namespace bookbookie.Controllers
             return View();
         }
         [HttpPost]
-        public ActionResult AddNewBook(BookModel bookModel)
+        public IActionResult AddNewBook(BookModel bookModel)
         {
-            _bookRepository.AddNewBook(bookModel);
+           int id =  _bookRepository.AddNewBook(bookModel);
+            if (id > 0)
+            {
+                return RedirectToAction(nameof(AddNewBook), new { isSuccess = true }); 
+            }
             return View();
         }
     }

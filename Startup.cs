@@ -20,9 +20,7 @@ namespace bookbookie
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-           services.AddDbContext<BookStoreContext>(
-               options => options.UseSqlServer("Server=bookbookie.database.windows.net;Database=bookbookie;User Id=bookbookie;Password=P3nGu!n$95;"));
-
+         
 
             services.AddControllersWithViews();
 
